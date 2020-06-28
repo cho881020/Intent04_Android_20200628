@@ -55,5 +55,28 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
 
         }
+
+//        네이버 (웹) 링크
+
+        naverInternetBtn.setOnClickListener {
+            val myUri = Uri.parse("https://naver.com")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
+
+//        카카오는 (앱) 링크
+
+        kakaoAppBtn.setOnClickListener {
+
+//            market:// 뒤의 주소는 플레이스토어에서 앱 화면에 들어가서 주소를 복사.
+
+            val myUri = Uri.parse("market://details?id=com.kakao.talk")
+
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+
+        }
+
+
     }
 }
