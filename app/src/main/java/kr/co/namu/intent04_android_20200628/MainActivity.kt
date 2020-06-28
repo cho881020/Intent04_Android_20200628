@@ -22,8 +22,12 @@ class MainActivity : AppCompatActivity() {
 //            문자를 어디로 보낼지 uri 세팅
             val myUri = Uri.parse("smsto:${inputPhone}")
 
+
+
 //            문자전송화면으로 이동
             val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
+//            어떤 내용을 입력했는지도 같이 전달
+            myIntent.putExtra("sms_body", inputContent)
             startActivity(myIntent)
 
         }
