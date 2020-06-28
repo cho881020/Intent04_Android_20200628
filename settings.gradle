@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Intent04_Android_20200628"
