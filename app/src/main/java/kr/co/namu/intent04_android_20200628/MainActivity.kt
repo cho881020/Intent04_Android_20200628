@@ -11,6 +11,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        callBtn.setOnClickListener {
+            val inputPhone = phoneNumEdt.text.toString()
+            val myUri = Uri.parse("tel:${inputPhone}")
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
+            startActivity(myIntent)
+        }
+
         dialBtn.setOnClickListener {
 //            입력한 폰번을 받아와서 그 번호에 전화 연결 (ACTION_DIAL)
 
